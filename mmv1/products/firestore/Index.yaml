@@ -69,6 +69,12 @@ examples:
     test_env_vars:
       project_id: 'PROJECT_NAME'
     external_providers: ["random", "time"]
+  - name: 'firestore_index_composite_single_field'
+    primary_resource_id: 'my-index'
+    vars:
+      database_id: 'database-id'
+    test_env_vars:
+      project_id: 'PROJECT_NAME'
   - name: 'firestore_index_datastore_mode'
     primary_resource_id: 'my-index'
     vars:
@@ -175,5 +181,3 @@ properties:
               properties:
  # Meant to be an empty object with no properties.
                 []
-    # Single field indexes _exist_, but the API only lets us manage composite ones.
-    min_size: 2
